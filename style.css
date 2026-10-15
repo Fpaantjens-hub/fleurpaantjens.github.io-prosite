@@ -1,0 +1,556 @@
+/* CSS reset, dit niet aanpassen! */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hieronder mag je eigen CSS code */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    color: #000;
+}
+
+.navbar {
+    height: 112px;
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    gap: 14px;
+    background: white;
+}
+
+.logo {
+    height: 86px;
+    width: 315px;
+
+    background: #ed6d27;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 18px;
+
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.menu-button {
+    width: 86px;
+    height: 86px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f7f7f7;
+
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.nav-right {
+    margin-left: auto;
+    
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.login-button {
+    height: 86px;
+    width: 86px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f7f7f7;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.search-button {
+    width: 86px;
+    height: 86px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f7f7f7;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    height: 715px;
+
+    margin: 0 13px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-image: url(img/chairmanachtergrond.png);
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.hero-content {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size:clamp(120px, 15vw, 250px) ;
+
+    font-weight: 800;
+
+    color: #211f20;
+
+    letter-spacing: -11px;
+
+    line-height: .9;
+}
+
+.categories {
+    display: grid;
+
+    grid-template-columns: 
+    1fr
+    1fr
+    1fr
+    1fr;
+
+    grid-template-rows: 
+    295px
+    295px;
+
+    gap: 6px;
+
+    padding: 6px;
+}
+
+.card {
+    border-radius: 34px;
+
+    padding: 24px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: 600;
+
+    position: relative;
+    z-index: 2;
+}
+
+.all-fonts {
+    grid-row: span 2;
+
+    background: #ed6d27;
+}
+
+.global-fonts {
+    background: #000;
+    color: white;
+    background-image: url(img/globalfontscolorwheel.png);
+    background-position: center;
+}
+
+.variable-fonts {
+    background: #edb4c8;
+}
+
+.smart-fonts {
+    background: #62add0;
+}
+
+.superfamilies {
+    background: #b9e0f3;
+}
+
+.legibility-fonts {
+    background: #b8a47c;
+}
+
+.optical-sizes {
+    background: #ed6d27;
+}
+
+.font-stack {
+    position: absolute;
+
+    left: 50%;
+    top: 52%;
+
+    width: 220px;
+    height: 220px;
+
+    transform: translate(-50%, -50%);
+}
+
+.font-paper {
+    position: absolute;
+
+    width: 150px;
+    height: 95px;
+
+    left: 35px;
+
+    transform: rotate(30deg) skewX(-30deg);
+
+    background: white;
+}
+
+.paper-1 {
+    top: 0;
+}
+
+.paper-2 {
+    top: 25px;
+    opacity: .8;
+}
+
+.paper-3 {
+    top: 50px;
+    opacity: .6;
+}
+
+.paper-4 {
+    top: 75px;
+    opacity: .4;
+}
+
+.paper-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    font-size: 50px;
+    color: black;
+}
+
+.color-wheel {
+    width: 138px;
+    height: 138px;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: 50%;
+    top: 52%;
+
+    transform: translate(-50%, -50%);
+
+    background: 
+    conic-gradient (
+        #e33 0deg,
+        #f90 45deg,
+        #ddf000 90deg,
+        #39a96b 135deg,
+        #3ca6df 180deg,
+        #5368e8 225deg,
+        #9d3fd0 270deg,
+        #e33 360deg
+    );
+}
+
+.color-wheel::after {
+    content: "";
+
+    position: absolute;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50% ;
+
+    background: black;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+
+}
+
+.global-fonts::after {
+content: "Browse  →";
+
+position: absolute;
+
+right: 22px;
+bottom: 25px;
+
+font-size: 20px;
+
+color: white;
+
+}
+
+.variable-example {
+    position: absolute;
+
+    left: 50%;
+    top: 55%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 95px;
+
+    font-weight: 300;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px #ed6d27;
+
+    letter-spacing: -15px;
+}
+
+.smart-example {
+    position: absolute;
+
+    left: 50%;
+    top: 52%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    font-size: 70px;
+}
+
+.smart-example span {
+    font-weight: 300;
+
+}
+
+.smart-example b {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.family-example {
+    position: absolute;
+
+    left: 50%;
+    top: 59%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0px;
+
+    font-size: 52px;
+}
+
+.family-example span .family-example span {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.family-example span:nth-child(1) {
+background: #61afd1; 
+padding: 8px 20px;
+}
+
+.family-example span:nth-child(2) {
+    background: white;
+    padding: 8px 20px;
+    transform: rotate(-10deg);
+}
+
+.family-example span:nth-child(3) {
+    background: #edb4c8;
+    padding: 8px 20px;
+}
+
+.family-example span:nth-child(4) {
+    background: #b8a47c;
+    padding: 8px 20px;
+}
+
+.legibility-example {
+    position: absolute;
+
+    left: 50%;
+    top: 58%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 70px;
+
+    letter-spacing: -10px;
+
+    color: white;
+
+    text-shadow: 
+    0 0 3px #555;
+}
+
+.optical-example {
+    position: absolute;
+
+    left: 50%;
+    top: 58%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: -5px;
+
+    font-size: 90px;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px #555;
+}
+
+.hero {
+    height: 715px;
+
+    margin: 0 13px;
+
+    background-image: url(img/chairmanachtergrond.png);
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+@media (max-width:900px){
+    .navbar {
+        height: 80px;
+    }
+
+    .logo {
+        width: 220px;
+        height: 60px;
+        font-size: 23px;
+    }
+
+    .menu-button,
+    .search-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .login-button {
+        height: 60px;
+        padding: 0 20px;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 17vw;
+        letter-spacing: -5px;
+    }
+
+    .categories {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .all-fonts {
+        grid-row: span 1;
+    }
+}
+
+@media (max-width:600px){
+    .navbar {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 170px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    .menu-button,
+    .search-button {
+        width: 54px;
+        height: 54px;
+    }
+
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 19vw;
+    }
+}
